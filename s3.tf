@@ -23,7 +23,7 @@ module "dir" {
 resource "aws_s3_bucket_object" "static_files" {
   for_each = module.dir.files
 
-  bucket       = var.s3_website_bucket
+  bucket       = aws_s3_bucket.my_bucket.id
   key          = each.key
   content_type = each.value.content_type
 
