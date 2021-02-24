@@ -1,6 +1,13 @@
 # terraform-kitchen-sink
 A single Terraform config to cover most cases of address and output types.
 
+## Required inputs
+
+- variable `s3_website_bucket`
+- ENV `GITHUB_TOKEN`
+- ENV `AWS_ACCESS_KEY_ID`
+- ENV `AWS_SECRET_ACCESS_KEY`
+
 ### Goals
 
 1. ~free~ cheap to apply
