@@ -13,7 +13,7 @@ module "dir" {
 resource "aws_s3_bucket_object" "static_files" {
   for_each = module.dir.files
 
-  bucket       = "terraform-kitchen-sink"
+  bucket       = var.s3_website_bucket
   key          = each.key
   content_type = each.value.content_type
 
