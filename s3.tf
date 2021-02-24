@@ -1,3 +1,13 @@
+resource "aws_s3_bucket" "my_bucket" {
+  bucket = var.s3_website_bucket
+  acl    = "public-read"
+  policy = file("policy.json")
+
+  website {
+    index_document = "index.html"
+    error_document = "error.html"
+  }
+}
 
 module "dir" {
   source  = "hashicorp/dir/template"
