@@ -7,14 +7,14 @@ resource "null_resource" "env" {
 }
 
 resource "null_resource" "null0" {
-  count = 50
+  count = 20
   triggers = {
     value = "EXAMPLE"
   }
 }
 
 resource "null_resource" "null1" {
-  count = 50
+  count = 20
    triggers = {
     value = "EXAMPLE-2"
   }

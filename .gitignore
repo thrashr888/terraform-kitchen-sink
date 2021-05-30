@@ -29,3 +29,7 @@ override.tf.json
 # example: *tfplan*
 tf.plan
 *tfplan*
+
+apply*.json
+plan*.json
+destroy*.json
