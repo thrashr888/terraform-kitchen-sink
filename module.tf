@@ -16,8 +16,8 @@ locals {
   }
 }
 
-module "deserts" {
-  source   = "./desert"
+module "desserts" {
+  source   = "./dessert"
   for_each = local.names
 
   name = module.example.name
@@ -25,7 +25,7 @@ module "deserts" {
 }
 
 module "cookie" {
-  source = "./desert"
+  source = "./dessert"
   count  = 12
 
   name = "chocolate chip"
@@ -37,5 +37,5 @@ output "a_dozen_cookies" {
 }
 
 output "all_of_it" {
-  value = { for k, m in module.deserts : k => m.everything }
+  value = { for k, m in module.desserts : k => m.everything }
 }
